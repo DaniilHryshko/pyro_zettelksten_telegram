@@ -1,0 +1,10 @@
+pyrobot:
+    container_name: my_archive
+    build: .
+    volumes:
+      - .:/src
+    command: python main.py
+    restart: always
+
+    env_file:
+      - ".env"
